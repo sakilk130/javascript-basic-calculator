@@ -33,3 +33,14 @@ body {
   font-weight: 100;
   overflow-x: auto;
 }
+
+.calculator-button {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+}
