@@ -1,6 +1,6 @@
 # javascript-basic-calculator
 
-###![Screenshot](./image/calculator.png)
+![Screenshot](./image/calculator.png)
 
 ### Live On: [view](https://sakilk130.github.io/javascript-basic-calculator/)
 
