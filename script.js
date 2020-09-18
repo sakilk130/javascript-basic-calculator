@@ -24,18 +24,31 @@ function addDecimal() {
   }
 }
 
+const calculate = {
+  '/': (firstNumber, secoundNumber) => firstNumber / secoundNumber,
+  '*': (firstNumber, secoundNumber) => firstNumber * secoundNumber,
+  '+': (firstNumber, secoundNumber) => firstNumber + secoundNumber,
+  '-': (firstNumber, secoundNumber) => firstNumber - secoundNumber,
+  '=': (firstNumber, secoundNumber) => secoundNumber,
+};
+
 function useOperator(operator) {
   const currentValue = Number(calculatorDisplay.textContent);
+  if (operatorValue && nextValue) {
+    operatorValue = operator;
+    return;
+  }
   if (!firstValue) {
     firstValue = currentValue;
   } else {
-    console.log('currentVAlue:', currentValue);
+    //console.log(firstValue, operatorValue, currentValue);
+    const calculation = calculate[operatorValue](firstValue, currentValue);
+    //console.log('calculation:', calculation);
+    calculatorDisplay.textContent = calculation;
+    firstValue = calculation;
   }
   nextValue = true;
   operatorValue = operator;
-
-  console.log('firstvalue:', firstValue);
-  console.log('OperatorValue:', operatorValue);
 }
 
 inputBtns.forEach((inputBtn) => {
