@@ -41,6 +41,44 @@ body {
   padding: 10px;
 }
 .equal-sign {
+  background: rgb(81, 179, 81);
+  color: white;
   grid-column: -2;
   grid-row: 2 / span 4;
+}
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgb(175, 193, 214);
+}
+button:hover {
+  filter: brightness(110%);
+}
+button:active {
+  transform: translateY(2px);
+}
+button:focus {
+  outline: none;
+}
+.operator {
+  background: rgb(125, 145, 168);
+  color: white;
+  font-size: 30px;
+}
+.clear {
+  background-color: rgb(230, 82, 82);
+  color: white;
+}
+.clear:hover {
+  filter: brightness(90%);
+}
+
+@media screen and(max-width:600px) {
+  .calculator {
+    width: 95%;
+  }
 }
